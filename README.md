@@ -1,36 +1,45 @@
 # README
 
-A pretext to practice Hotwire Turbo & Stimulus, applying (literally) the
-Getting Things Done methodology.
+A pretext to practice Hotwire Turbo & Stimulus, applying (literally) the Getting Things Done methodology.
 
 * Ruby version
+
 Ruby 2.7.3
 
-* System dependencies
-postgresql
+## Install
 
-* Install
-Install Docker and Docker compose, then :
-Create a .env.local file and set the postgres env variables (see .env example).
+Install Docker and Docker compose, then:
 
 ```bash
-docker-compose up --build
+docker-compose build
 ```
 
-* Database creation
+Then launch with:
+```bash
+docker-compose up -d
+
+```
+Create and setup the database with:
 
 ```bash
-docker-compose run --rm web rake db:create
+docker-compose exec todo-web rake db:create
 ```
 
-* Database initialization
-
 ```bash
-docker-compose run --rm web rake db:schema:load
+docker-compose exec todo-web rake db:schema:load
 ```
 
-* How to run the test suite
+The application is available locally on http://0.0.0.0:3000
+
+## Useful commands
+
+Install ruby dependencies:
 
 ```bash
-docker-compose exec bundle rspec
+docker-compose exec todo-web bundle
+```
+
+To run the test suite :
+```bash
+docker-compose exec todo-web rspec
 ```

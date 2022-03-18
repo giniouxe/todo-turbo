@@ -1,4 +1,4 @@
-FROM ruby:2.7.2
+FROM ruby:2.7.3
 
 RUN apt-get update -qq && apt-get install -y postgresql-client
 
@@ -12,7 +12,6 @@ RUN groupadd --gid 1000 $USERNAME \
 
 ADD . /docker-todo
 WORKDIR /docker-todo
-RUN bundle install
 EXPOSE 3000
 CMD ["bash"]
 

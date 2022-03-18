@@ -5,7 +5,7 @@ default: &default
   password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
   timeout: 5000
   encoding: unicode
-  host: database
+  host: todo-database
 
 development:
   <<: *default

@@ -208,6 +208,8 @@ GEM
       actionpack (>= 5.2)
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
+    tailwindcss-rails (2.0.8)
+      railties (>= 6.0.0)
     thor (1.2.1)
     tilt (2.0.10)
     turbo-rails (1.0.0)
@@ -252,13 +254,14 @@ DEPENDENCIES
   rspec-rails (~> 5.0.0)
   sass-rails (>= 6)
   selenium-webdriver
+  tailwindcss-rails
   turbo-rails
   tzinfo-data
   web-console (>= 4.1.0)
   webdrivers
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 2.7.3p183
 
 BUNDLED WITH
    2.1.4
