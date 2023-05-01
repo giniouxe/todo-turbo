@@ -1,6 +1,6 @@
-FROM ruby:2.7.3
+FROM ruby:3.0.0
 
-RUN apt-get update -qq && apt-get install -y postgresql-client
+RUN apt-get update -qq && apt-get install -y postgresql-client && gem install bundler
 
 # Create the user
 ARG USERNAME=todo
